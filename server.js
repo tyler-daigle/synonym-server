@@ -1,7 +1,7 @@
 const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 const API_KEY = process.env.API_KEY;
 
 if (typeof API_KEY === "undefined") {
