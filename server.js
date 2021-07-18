@@ -6,7 +6,7 @@ const API_KEY = process.env.API_KEY;
 
 if (typeof API_KEY === "undefined") {
   console.error(
-    "You need to set the api key for the thesauarus in the API_KEY environment variable."
+    "You need to set the api key for the thesaurus in the API_KEY environment variable."
   );
   process.exit();
 }
