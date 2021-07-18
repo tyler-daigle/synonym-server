@@ -3,6 +3,7 @@ const fetch = require("node-fetch");
 const app = express();
 const port = process.env.PORT || 8000;
 const API_KEY = process.env.API_KEY;
+const cors = require("cors");
 
 if (typeof API_KEY === "undefined") {
   console.error(
@@ -10,6 +11,8 @@ if (typeof API_KEY === "undefined") {
   );
   process.exit();
 }
+
+app.use(cors());
 
 app.get("/api", async (req, res) => {
   console.log(req.query.word);
